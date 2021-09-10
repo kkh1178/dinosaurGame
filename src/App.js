@@ -1,25 +1,70 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import Game from "./components/Game";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [animateChar, setAnimateChar] = useState(false);
+    const [animateBlock, setAnimateBlock] = useState(false);
+    const [message, setMessage] = useState("Play");
+    const [time, setTime] = useState(null);
+
+    const playGame = () => {
+        if (!animateBlock) {
+            setAnimateBlock(true);
+            setMessage("Stop");
+        } else {
+            setAnimateBlock(false);
+            setMessage("Play");
+        }
+    };
+
+    useEffect(() => {
+        let interval = null;
+        if (animateChar) {
+            interval = setInterval(() => {
+                setTime((time) => time + 1);
+            }, 1000);
+        } else if (!animateChar && time !== 0) {
+            clearInterval(interval);
+        }
+        return () => clearInterval(interval);
+    }, [animateBlock, time]);
+
+    const jump = () => {
+        if (!animateChar) {
+            console.log("changing to", animateChar);
+            setAnimateChar(true);
+        }
+        setTimeout(function () {
+            setAnimateChar(false);
+        }, 500);
+    };
+
+    // const checkDeath = setInterval(function () {
+    //     console.log(
+    //         parseInt(
+    //             "character top: ",
+    //             window.getComputedStyle(character).getPropertyValue("top")
+    //         )
+    //     );
+    //     console.log(
+    //         "blockLeft: ",
+    //         parseInt(window.getComputedStyle(block).getPropertyValue("left"))
+    //     );
+    // }, 10);
+
+    return (
+        <div className="App">
+            <Game animateBlock={animateBlock} animateChar={animateChar}></Game>
+            <button className="button" onClick={playGame}>
+                {message}
+            </button>
+            <div class="divider" />
+            <button className="button" onClick={jump}>
+                Jump
+            </button>
+        </div>
+    );
 }
 
 export default App;
