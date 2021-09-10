@@ -1,30 +1,34 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Game from "./components/Game";
+import Timer from "./components/Timer";
 
 function App() {
     const [animateChar, setAnimateChar] = useState(false);
     const [animateBlock, setAnimateBlock] = useState(false);
     const [message, setMessage] = useState("Play");
-    const [time, setTime] = useState(null);
+    const [time, setTime] = useState(0);
 
     const playGame = () => {
+        // If animateBlock is false, change the state to truea and set the button message to stop
         if (!animateBlock) {
             setAnimateBlock(true);
             setMessage("Stop");
         } else {
             setAnimateBlock(false);
             setMessage("Play");
+            setTime(0);
         }
     };
 
+    // If animate block is true, start a timer that will show a fraction of a second
     useEffect(() => {
         let interval = null;
-        if (animateChar) {
+        if (animateBlock) {
             interval = setInterval(() => {
                 setTime((time) => time + 1);
-            }, 1000);
-        } else if (!animateChar && time !== 0) {
+            }, 100);
+        } else if (!animateBlock && time !== 0) {
             clearInterval(interval);
         }
         return () => clearInterval(interval);
@@ -56,10 +60,11 @@ function App() {
     return (
         <div className="App">
             <Game animateBlock={animateBlock} animateChar={animateChar}></Game>
+            <Timer timer={time}></Timer>
             <button className="button" onClick={playGame}>
                 {message}
             </button>
-            <div class="divider" />
+            <div className="divider" />
             <button className="button" onClick={jump}>
                 Jump
             </button>
