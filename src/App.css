@@ -28,10 +28,10 @@
         top: 80px;
     }
     30% {
-        top: 40px;
+        top: 20px;
     }
     70% {
-        top: 40px;
+        top: 20px;
     }
     100% {
         top: 80px;
@@ -63,6 +63,7 @@
     }
 }
 
+/* adding a tiny divider between the buttons */
 .divider {
     width: 5px;
     height: auto;

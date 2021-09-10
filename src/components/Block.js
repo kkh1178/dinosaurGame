@@ -1,10 +1,11 @@
-import React from "react";
-import "../App.css";
+import React, { useRef } from "react";
 
-const Block = ({ animateBlock }) => {
-    // console.log("AnimateBlock should be: ", animateBlock);
+const Block = ({ animateBlock, allRefs }) => {
     return (
-        <div className={`block ${animateBlock ? "block-animate" : ""}`}></div>
+        <div
+            className={`block ${animateBlock ? "block-animate" : ""}`}
+            ref={allRefs.block}
+        ></div>
     );
 };
 

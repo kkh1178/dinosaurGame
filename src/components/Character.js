@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useRef } from "react";
 
-const Character = ({ animateChar }) => {
-    // console.log(animateChar);
+const Character = ({ animateChar, allRefs }) => {
     return (
         <div
+            ref={allRefs.character}
             className={`character ${animateChar ? "character-animate " : ""}`}
         ></div>
     );
