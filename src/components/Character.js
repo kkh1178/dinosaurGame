@@ -5,7 +5,9 @@ const Character = ({ animateChar, allRefs }) => {
         <div
             ref={allRefs.character}
             className={`character ${animateChar ? "character-animate " : ""}`}
-        ></div>
+        >
+            <div className="dino"></div>
+        </div>
     );
 };
 

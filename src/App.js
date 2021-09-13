@@ -14,8 +14,9 @@ function App() {
     const block = useRef();
     const character = useRef();
 
+    // function that will turn on the animations when a player hits play
     const playGame = () => {
-        // If animateBlock is false, change the state to truea and set the button message to stop
+        // If animateBlock is false, change the state to true and set the button message to stop
         if (!animateBlock) {
             setAnimateBlock(true);
             setMessage("Stop");
@@ -25,16 +26,7 @@ function App() {
             setTime(0);
         }
     };
-
-    // let characterTop = parseInt(
-    //     window.getComputedStyle(character.style).getPropertyValue("top")
-    // );
-    // let blockLeft = parseInt(
-    //     window.getComputedStyle(block.style).getPropertyValue("left")
-    // );
-
-    // If animate block is true, start a timer that will show a fraction of a second
-
+    // UseEffect that will check to see if a player has died and will run the timer
     useEffect(() => {
         const checkDeath = setInterval(function () {
             let characterTop = parseInt(
@@ -67,6 +59,7 @@ function App() {
         return () => clearInterval(interval);
     }, [animateBlock, time, message]);
 
+    // This will tell the character to jump when the player hits the jump button
     const jump = () => {
         if (!animateChar) {
             setAnimateChar(true);
@@ -76,13 +69,12 @@ function App() {
         }, 500);
     };
 
-    // const checkDeath = setInterval(function () {}, 10);
-
     return (
         <div className="App">
             <Game
                 animateBlock={animateBlock}
                 animateChar={animateChar}
+                // Using an object to pass down multiple references
                 allRefs={{ character, block }}
             ></Game>
             <Timer timer={time}></Timer>

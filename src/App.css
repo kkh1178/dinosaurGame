@@ -9,12 +9,54 @@
     border: 1px solid black;
 }
 
+.dino {
+    width: 1px;
+    height: 1px;
+    background-color: #1abc9c;
+    box-shadow: 33px 9px 0 1px#555555, 36px 9px 0 1px#555555,
+        39px 9px 0 1px#555555, 42px 9px 0 1px#555555, 45px 9px 0 1px#555555,
+        30px 12px 0 1px#555555, 33px 12px 0 1px#555555, 36px 12px 0 1px#555555,
+        39px 12px 0 1px#555555, 42px 12px 0 1px#555555, 45px 12px 0 1px#555555,
+        48px 12px 0 1px#555555, 30px 15px 0 1px#555555, 33px 15px 0 1px#555555,
+        39px 15px 0 1px#555555, 42px 15px 0 1px#555555, 45px 15px 0 1px#555555,
+        48px 15px 0 1px#555555, 30px 18px 0 1px#555555, 33px 18px 0 1px#555555,
+        36px 18px 0 1px#555555, 39px 18px 0 1px#555555, 42px 18px 0 1px#555555,
+        45px 18px 0 1px#555555, 48px 18px 0 1px#555555, 6px 21px 0 1px#555555,
+        30px 21px 0 1px#555555, 33px 21px 0 1px#555555, 36px 21px 0 1px#555555,
+        39px 21px 0 1px#555555, 42px 21px 0 1px#555555, 45px 21px 0 1px#555555,
+        6px 24px 0 1px#555555, 27px 24px 0 1px#555555, 30px 24px 0 1px#555555,
+        33px 24px 0 1px#555555, 36px 24px 0 1px#555555, 6px 27px 0 1px#555555,
+        9px 27px 0 1px#555555, 24px 27px 0 1px#555555, 27px 27px 0 1px#555555,
+        30px 27px 0 1px#555555, 33px 27px 0 1px#555555, 36px 27px 0 1px#555555,
+        6px 30px 0 1px#555555, 9px 30px 0 1px#555555, 12px 30px 0 1px#555555,
+        21px 30px 0 1px#555555, 24px 30px 0 1px#555555, 27px 30px 0 1px#555555,
+        30px 30px 0 1px#555555, 33px 30px 0 1px#555555, 36px 30px 0 1px#555555,
+        39px 30px 0 1px#555555, 42px 30px 0 1px#555555, 45px 30px 0 1px#555555,
+        9px 33px 0 1px#555555, 12px 33px 0 1px#555555, 15px 33px 0 1px#555555,
+        18px 33px 0 1px#555555, 21px 33px 0 1px#555555, 24px 33px 0 1px#555555,
+        27px 33px 0 1px#555555, 30px 33px 0 1px#555555, 33px 33px 0 1px#555555,
+        36px 33px 0 1px#555555, 45px 33px 0 1px#555555, 9px 36px 0 1px#555555,
+        12px 36px 0 1px#555555, 15px 36px 0 1px#555555, 18px 36px 0 1px#555555,
+        21px 36px 0 1px#555555, 24px 36px 0 1px#555555, 27px 36px 0 1px#555555,
+        30px 36px 0 1px#555555, 33px 36px 0 1px#555555, 36px 36px 0 1px#555555,
+        12px 39px 0 1px#555555, 15px 39px 0 1px#555555, 18px 39px 0 1px#555555,
+        21px 39px 0 1px#555555, 24px 39px 0 1px#555555, 27px 39px 0 1px#555555,
+        30px 39px 0 1px#555555, 33px 39px 0 1px#555555, 12px 42px 0 1px#555555,
+        15px 42px 0 1px#555555, 18px 42px 0 1px#555555, 21px 42px 0 1px#555555,
+        24px 42px 0 1px#555555, 27px 42px 0 1px#555555, 30px 42px 0 1px#555555,
+        12px 45px 0 1px#555555, 15px 45px 0 1px#555555, 18px 45px 0 1px#555555,
+        21px 45px 0 1px#555555, 24px 45px 0 1px#555555, 27px 45px 0 1px#555555,
+        15px 48px 0 1px#555555, 18px 48px 0 1px#555555, 21px 48px 0 1px#555555,
+        24px 48px 0 1px#555555, 15px 51px 0 1px#555555, 24px 51px 0 1px#555555,
+        15px 54px 0 1px#555555, 18px 54px 0 1px#555555, 24px 54px 0 1px#555555,
+        27px 54px 0 1px#555555;
+}
+
 .character {
-    width: 20px;
-    height: 50px;
-    background-color: red;
     position: relative;
-    top: 80px;
+    width: 20px;
+    height: 55px;
+    top: 75px;
 }
 .character-animate {
     animation-name: jump;
@@ -41,7 +83,7 @@
 .block {
     width: 20px;
     height: 20px;
-    background-color: blue;
+    background-color: #4caf50;
     position: relative;
     top: 130px;
     left: 580px;
@@ -71,7 +113,7 @@
 }
 
 .button {
-    background-color: #555555; /* Green */
+    background-color: #555555;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -79,4 +121,9 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+}
+
+.timer {
+    color: #4caf50;
+    padding-left: 5px;
 }
