@@ -6,4 +6,4 @@ This game is normally hidden on the No Internet connection page in Google's Chro
 
 #
 
-![pixelated dinosaur](/img/dino.png "dinosaur game")
+![pixelated dinosaur](./img/Dino.png "dinosaur game")
