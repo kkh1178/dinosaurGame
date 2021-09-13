@@ -1,3 +1,9 @@
 ## Dinosaur game
 
-##### Recreated the google Dinosaur T-Rex Game using JavaScript and React.
+Recreated Google's Dinosaur T-Rex Game using JavaScript and React.
+
+This game is normally hidden on the No Internet connection page in Google's Chrome web browser.
+
+#
+
+![pixelated dinosaur](/img/dino.png "dinosaur game")
