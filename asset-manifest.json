@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/dinosaurGame/static/css/main.df7f402c.chunk.css",
+    "main.js": "/dinosaurGame/static/js/main.1e3f53b0.chunk.js",
+    "main.js.map": "/dinosaurGame/static/js/main.1e3f53b0.chunk.js.map",
+    "runtime-main.js": "/dinosaurGame/static/js/runtime-main.fb8bf5d5.js",
+    "runtime-main.js.map": "/dinosaurGame/static/js/runtime-main.fb8bf5d5.js.map",
+    "static/js/2.10ae2f5b.chunk.js": "/dinosaurGame/static/js/2.10ae2f5b.chunk.js",
+    "static/js/2.10ae2f5b.chunk.js.map": "/dinosaurGame/static/js/2.10ae2f5b.chunk.js.map",
+    "index.html": "/dinosaurGame/index.html",
+    "static/css/main.df7f402c.chunk.css.map": "/dinosaurGame/static/css/main.df7f402c.chunk.css.map",
+    "static/js/2.10ae2f5b.chunk.js.LICENSE.txt": "/dinosaurGame/static/js/2.10ae2f5b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fb8bf5d5.js",
+    "static/js/2.10ae2f5b.chunk.js",
+    "static/css/main.df7f402c.chunk.css",
+    "static/js/main.1e3f53b0.chunk.js"
+  ]
+}
